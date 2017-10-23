@@ -1,14 +1,15 @@
 # word2vec_Miyazawa
 word2vec for Japanese language test. 
-Train with several works of Kiichi Miyazawa (download from Aozora Bunku).
-But you can use any input you like. Support Japanese and other UTF-8 input(for some other non-ascii text, you need to import extra font file).
+Train with several works of Kiichi Miyazawa (download from Aozora Bunku).\n
+But you can use any input you like. Support Japanese and other UTF-8 input\n
+(for some other non-ascii text, you need to import extra font file)
 
 ## Preprocess
-'txr_preprocess.py' would output the segmented and punctuation-free file.
+'txr_preprocess.py' would output the segmented and punctuation-free file.\n
 See 'miyazawa_raw.txt' and 'miyazawa_seg.txt' for the differece.
 
 ## Visualization
-using T-SNE(sklearn) for dedimension and bokeh or plt for visualization.
+using T-SNE(sklearn) for dedimension and bokeh or plt for visualization.\n
 (you can use the pre-tained file 'miyazawa_vec.txt' for test.
 
 ## Compare words
