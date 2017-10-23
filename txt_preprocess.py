@@ -5,7 +5,6 @@ import codecs
 import argparse
 import re, string
 
-
 parser =argparse.ArgumentParser()
 parser.add_argument('input_dict', help = 'the file of input dictionary')
 parser.add_argument('--utf8', help = 'switch to utf-8 mode', action = 'store_true')
@@ -15,7 +14,6 @@ index = args.input_dict.find('.txt')
 output_file = args.input_dict[:index] +'_seg'+ args.input_dict[index:]
 
 input_file = open(args.input_dict, 'r')
-
 
 #mecab for japanese segmentation
 if args.utf8:
