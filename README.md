@@ -5,4 +5,4 @@ word2vec for Japanese language test. Train with several works of Kiichi Miyazawa
 'txr_preprocess.py' for segmentation(Macab) and filter out punctuation.
 
 ## Visualization
-using T-SNE(sklearn) for dedimension and bokeh for visualization.
+using T-SNE(sklearn) for dedimension and bokeh or plt for visualization.
