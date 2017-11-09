@@ -1,5 +1,5 @@
 from visualization import *
-from word2vec_test_jp import train, make_voclist
+from word2vec_jp import train, make_voclist
 import argparse
 
 parser =argparse.ArgumentParser()
@@ -9,14 +9,14 @@ parser.add_argument('--vis_plt', help = 'visualization with plt', action = 'stor
 parser.add_argument('--vis_bokeh', help = 'visualization with bokeh', action = 'store_true')
 args = parser.parse_args()
 
-if w2v:
+if args.w2v:
     vocs, vec = train(args.input)
     voclist = make_voclist(vocs)
 else:
     voclist, vec = load_vec(args.input)
 
-if vis_plt:
+if args.vis_plt:
     tsne_plt(voclist, vec)
 
-if vis_bokeh:
+if args.vis_bokeh:
     tsne(voclist, vec)

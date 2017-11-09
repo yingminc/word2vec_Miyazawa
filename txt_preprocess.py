@@ -20,7 +20,7 @@ if args.utf8:
     lines = input_file.read().decode('utf-8').split(u'\n')
     lines = list(set(lines))
     #remove punctuation
-    jpun = re.compile(u'^[\u3000-\u303f\uff00-\uff65]$')
+    jpun = re.compile(u'^[\u3000-\u303f\uff00-\uff65\n\t\r]$')
     mt = MeCab.Tagger('-F\s%f[6] -U\s%m -E\\n')
     line_num = 0
     for line in lines:
@@ -35,7 +35,7 @@ if args.utf8:
              output_txt.write('\n')
         line_num += 1
         if line_num % 100 ==0:
-            print 'line ', line_num, " processed"
+            print('line ', line_num, " processed")
 
 else: #english text
     lines = input_file.read().split('\n')
@@ -43,8 +43,8 @@ else: #english text
     #remove punctuation
     pl = list(set(string.punctuation))
     pl.remove('-')
-    pl.extend(['\n', '\r'])
-    print pl
+    pl.extend(['\n', '\r','\t'])
+    print(pl)
     for line in lines:
         nline = []
         line_num = 0
@@ -58,4 +58,4 @@ else: #english text
 
         line_num += 1
         if line_num % 100 ==0:
-            print 'line ', line_num, " processed"
+            print('line ', line_num, " processed")
