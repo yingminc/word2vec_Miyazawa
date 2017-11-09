@@ -1,5 +1,5 @@
 from visualization import *
-from word2vec_jp import train, make_voclist
+from word2vec_jp import train, make_voclist, load_vec
 import argparse
 
 parser =argparse.ArgumentParser()
@@ -19,4 +19,4 @@ if args.vis_plt:
     tsne_plt(voclist, vec)
 
 if args.vis_bokeh:
-    tsne(voclist, vec)
+    tsne_bokeh(voclist, vec)
